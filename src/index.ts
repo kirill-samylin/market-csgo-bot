@@ -264,6 +264,10 @@ export function start(userSettings: Settings) {
     throw new Error('No correct settings')
   }
   installUserSettings(setting, userSettings)
+  jsonLog({
+    message: 'init setting',
+    log: setting
+  })
   jsonLog({ message: 'start sales' });
   setInterval(online,120000);
   setInterval(checkBalance,300000);
