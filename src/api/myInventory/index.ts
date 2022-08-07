@@ -7,5 +7,5 @@ type ApiMyInventoryResponse = {
 }
 
 export function apiMyInventory(key: string): Promise<ApiMyInventoryResponse> {
-  return httpClient.get(`/v2/my-inventory/?key=${key}`)
+  return httpClient.get(`/my-inventory/?key=${key}`)
 }

@@ -7,5 +7,5 @@ type ApiGetMoney = {
 }
 
 export function apiGetMoney(key: string): Promise<ApiGetMoney> {
-  return httpClient.get(`/v2/get-money?key=${key}`)
+  return httpClient.get(`/get-money?key=${key}`)
 }
