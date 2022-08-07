@@ -153,7 +153,7 @@ function getItemsForTrade() {
       if (response.success && response.offers && response.offers.length) {
         response.offers.forEach((offer) => setting.onSendOffer(offer))
       } else {
-        jsonLog({ message: 'Не смогли получить инвентарь' })
+        jsonLog({ message: 'Нет предметов для отправки' })
       }
     })
     .catch((err) => jsonLog({
