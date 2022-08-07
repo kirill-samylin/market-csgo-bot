@@ -24,7 +24,9 @@ let balance = 0
 const setting: Settings = {
   key: '', // key csgotm
   minPriceForSale: 10,
-  onSendOffer: () => {},
+  onSendOffer: (offer) => {
+    throw new Error(JSON.stringify(offer))
+  },
   isViewLogs: true,
 }
 
@@ -35,8 +37,10 @@ type JsonLog = {
 
 export function jsonLog(obj: JsonLog) {
   if (setting.isViewLogs) {
+    // tslint:disable-next-line:no-console
     console.log(`${new Date()}: ${obj.message}`)
     if (obj.log) {
+      // tslint:disable-next-line:no-console
       console.log(JSON.stringify(obj, null, 2))
     }
   }
@@ -265,7 +269,7 @@ function start(userSettings: Settings) {
   setInterval(checkBalance,300000);
   setInterval(getItemsForTrade,60000);
   if (isSaleActive(setting)) {
-    setInterval(getItemsOnSell,setting.timeIntervalSecond * 1000); //раз в час - % от цены
+    setInterval(getItemsOnSell,setting.timeIntervalSecond * 1000);
   }
 }
 
