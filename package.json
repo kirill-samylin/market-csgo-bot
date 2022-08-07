@@ -1,0 +1,29 @@
+{
+  "name": "market-csgo-bot",
+  "version": "1.0.0",
+  "description": "Bot for easy sale items on market csgo",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirill-samylin/market-csgo-bot.git"
+  },
+  "keywords": [],
+  "author": "Kirill Samylin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kirill-samylin/market-csgo-bot/issues"
+  },
+  "homepage": "https://github.com/kirill-samylin/market-csgo-bot#readme",
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.7.4"
+  }
+}
