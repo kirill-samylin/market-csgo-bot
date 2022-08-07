@@ -244,7 +244,7 @@ function online() {
     }))
 }
 
-function setApiKey(apiKey: string) {
+export function setApiKey(apiKey: string) {
   apiSetApiKey(setting.key, apiKey)
     .then((response) => {
       if (response.success) {
@@ -259,7 +259,7 @@ function setApiKey(apiKey: string) {
     }))
 }
 
-function start(userSettings: Settings) {
+export function start(userSettings: Settings) {
   if (!isValidSetting(userSettings)) {
     throw new Error('No correct settings')
   }
@@ -271,9 +271,4 @@ function start(userSettings: Settings) {
   if (isSaleActive(setting)) {
     setInterval(getItemsOnSell,setting.timeIntervalSecond * 1000);
   }
-}
-
-export default {
-  setApiKey,
-  start,
 }

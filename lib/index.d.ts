@@ -4,10 +4,6 @@ declare type JsonLog = {
     log?: object;
 };
 export declare function jsonLog(obj: JsonLog): void;
-declare function setApiKey(apiKey: string): void;
-declare function start(userSettings: Settings): void;
-declare const _default: {
-    setApiKey: typeof setApiKey;
-    start: typeof start;
-};
-export default _default;
+export declare function setApiKey(apiKey: string): void;
+export declare function start(userSettings: Settings): void;
+export {};
